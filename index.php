@@ -9,8 +9,8 @@
   <body>
     <header>
       <div class="header-title">
-        <img class="creighton-image" src="creighton.png" />
         <img class="basketball-image" src="basketball.png" />
+        <img class="creighton-image" src="creighton.png" />
         <h1>Creighton Men's Basketball</h1>
       </div>
       <nav class="header-nav">
