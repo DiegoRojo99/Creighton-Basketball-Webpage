@@ -33,26 +33,19 @@
           
             $queryUsers  = 'SELECT * FROM Player ORDER BY Number';
             $resultUsers = mysqli_query($dataBase, $queryUsers) or die('Query failed: '.mysqli_error($dataBase));
-            echo "<h2 style='text-align:center'>2021-22 Men's Basketball Roster<h2>";
+            echo "<h2 style='text-align:center'>2021-22 Men's Basketball Roster List<h2>";
             echo "<table>";
-            echo "<tr> <th>Number</th> <th>First Name</th> <th>Last Name</th> <th>Class</th> <th>Height</th> <th>Weight</th>
-            <th>City</th><th>State</th><th>Country</th><th>Position</th><th>Image</th></tr>";
             while ($lineUsers = mysqli_fetch_array($resultUsers, MYSQL_ASSOC)) {extract($lineUsers);
-              echo "<tr> <td>$Number</td> <td>$FirstName</td>  <td>$LastName</td> <td>$Class</td> <td>$Height</td>
-              <td>$Weight</td> <td>$City</td> <td>$State</td> <td>$Country</td> <td>$Position</td> <td>$Image</td> </tr>";
+              echo "<tr><td><img src='$Image'></img></td> <td>$Number) $FirstName $LastName</td>
+              <td>$Position / $Height / $Weight Lbs</td> 
+              <td>$Class / $City, $State $Country</td>   </tr>";
             }
             echo "</table>";
           
             mysqli_close($dataBase);
           
           }
-
             showAllData();
-
-          
-
-         
-          
         ?>
       </section>
 
