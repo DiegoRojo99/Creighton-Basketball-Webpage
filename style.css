@@ -1,12 +1,13 @@
 html {
     position: relative;
     min-height: 100%;
-  }
+}
   
 body {
 font-family: "Roboto", Arial, Helvetica, sans-serif;
 margin: 0;
 }
+
 header {
 display: flex;
 flex-direction: column;
@@ -17,12 +18,12 @@ padding: 30px 0 20px 0;
 }
 
 .header-title {
-display: flex;
+display: inline-flex;
 align-items: flex-start;
 }
 
 .basketball-image {
-width: 60px;
+width: 100px;
 padding-right: 20px;
 align-self: center;
 position: relative;
@@ -30,10 +31,10 @@ animation: movingBasketball linear 10s infinite 1s alternate;
 }
 
 .creighton-image {
-    width: 60px;
-    padding-right: 20px;
+    width: 100px;
+    padding-right: 500px;
     align-self: left;
-    position: relative;
+    position: absolute;
 }
 
 @keyframes movingBasketball {
@@ -45,7 +46,7 @@ animation: movingBasketball linear 10s infinite 1s alternate;
 
 100% {
     opacity: 0.5;
-    left: 850px;
+    left: 780px;
     transform: rotate(1080deg);
 }
 }
@@ -95,7 +96,6 @@ text-align: center;
 }
 
 
-
 footer {
 position: absolute;
 bottom: 0;
@@ -111,7 +111,6 @@ footer a {
 color: rgb(133, 126, 111);
 }
 
-
 /* Add Zoom Animation */
 .animate {
 animation: animatezoom 1s;
@@ -124,23 +123,4 @@ from {
 to {
     transform: scale(1);
 }
-}
-
-
-
-/* Table Styling */
-table {
-font-family: arial, sans-serif;
-border-collapse: collapse;
-width: 100%;
-}
-
-td, th {
-border: 1px solid #dddddd;
-text-align: center;
-padding: 8px;
-}
-
-tr:nth-child(even) {
-background-color: #dddddd;
 }
