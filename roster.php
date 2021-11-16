@@ -7,8 +7,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Creighton Men's Basketball</title>
-    <link rel="stylesheet" href="table.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="rosterTable.css" />
+    
   </head>
   <body>
     <header>
@@ -20,7 +21,7 @@
       <nav class="header-nav">
         <ul>
           <li><a href="index.php">Home</a></li>
-          <li><a href="roster.php" id="this">Roster</a></li>
+          <li><a href="" id="this">Roster</a></li>
           <li><a href="schedule.php">Schedule</a></li>
         </ul>
       </nav>
@@ -31,21 +32,30 @@
           function showAllData() {
             $dataBase = connectDB();
           
-            $queryUsers  = 'SELECT * FROM Player ORDER BY Number';
-            $resultUsers = mysqli_query($dataBase, $queryUsers) or die('Query failed: '.mysqli_error($dataBase));
-            echo "<h2 style='text-align:center'>2021-22 Men's Basketball Roster<h2>";
-            echo "<table>";
-            while ($lineUsers = mysqli_fetch_array($resultUsers, MYSQL_ASSOC)) {extract($lineUsers);
-              echo "<tr><td><img src='$Image'></img></td> <td>$Number) $FirstName $LastName</td>
-              <td>$Position / $Height / $Weight Lbs</td> 
-              <td>$Class / $City, $State $Country</td>   </tr>";
+            $query  = 'SELECT * FROM Player ORDER BY Number';
+            $result = mysqli_query($dataBase, $query) or die('Query failed: '.mysqli_error($dataBase));
+            echo "<h2 style='text-align:center'>2021-22 Men's Basketball Roster List<h2>";
+            echo "<ul class='players-list'>";
+            while ($line = mysqli_fetch_array($result, MYSQL_ASSOC)) {extract($line);
+              echo "<li class='player-in-list'>";
+                echo "<div class='player-image-div'>
+                        <img src='$Image'>
+                      </div>";
+                echo "<div class='player-background'>
+                      <span style='font-style: oblique;font-weight:bold'>$Class</span> / $City, $State $Country
+                      </div>";
+                echo "<div class='player-name-and-physical'><span style='font-size: 65%'>
+                      $Position / $Height / $Weight Lbs</span></br>
+                      $Number $FirstName $LastName
+                      </div>";
+              echo "</li>";
             }
-            echo "</table>";
+            echo "</ul>";
           
             mysqli_close($dataBase);
           
           }
-            showAllData();
+          showAllData();
         ?>
       </section>
 

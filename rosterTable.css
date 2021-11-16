@@ -1,0 +1,40 @@
+.clearfix::after {
+content: "";
+clear: both;
+display: table;
+}
+.players-list {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+width:1000px;
+background-color:#005CA9;
+color: white;
+border: solid 1px black;
+}
+li div{
+display:inline-block;
+text-align: left;
+font-weight:normal;
+height:120px;
+}
+.player-name-and-physical{
+float: right;
+padding: 30px 0px 0px 020px;
+height:90px;
+width:44%;
+} 
+.player-background{
+float: right;
+padding: 45px 0px 0px 20px;
+height:75px;
+width:44%;
+}
+li{
+max-height:120px;
+}
+li.player-in-list:nth-child(even) {
+background-color:  white;
+color:black;
+}
