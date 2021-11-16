@@ -33,7 +33,7 @@
           
             $queryUsers  = 'SELECT * FROM Player ORDER BY Number';
             $resultUsers = mysqli_query($dataBase, $queryUsers) or die('Query failed: '.mysqli_error($dataBase));
-            echo "<h2 style='text-align:center'>2021-22 Men's Basketball Roster List<h2>";
+            echo "<h2 style='text-align:center'>2021-22 Men's Basketball Roster<h2>";
             echo "<table>";
             while ($lineUsers = mysqli_fetch_array($resultUsers, MYSQL_ASSOC)) {extract($lineUsers);
               echo "<tr><td><img src='$Image'></img></td> <td>$Number) $FirstName $LastName</td>
