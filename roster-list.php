@@ -19,7 +19,7 @@
         margin: 0;
         padding: 0;
         overflow: hidden;
-        width:800px;
+        width:1000px;
         background-color:#005CA9;
       }
       li div{
@@ -34,7 +34,12 @@
         float: right;
         padding: 40px 10px 0px 10px;
         height:80px;
-        width:auto;
+      }
+      .player-name-and-physical{
+        width:43%;
+      } 
+      .player-background{
+        width:43%;
       }
       li{
         border: 5px dashed green;
