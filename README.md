@@ -1,2 +1,2 @@
 # Webpage Link
-[Creighton-Basketball-Webpage](diego-rojo.epizy.com)
+[Creighton-Basketball-Webpage](file:///C:/Users/diegu/source/repos/Creighton-Basketball-Webpage/html/index.html)

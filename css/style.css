@@ -1,0 +1,146 @@
+html {
+    position: relative;
+    min-height: 100%;
+  }
+  
+body {
+font-family: "Roboto", Arial, Helvetica, sans-serif;
+margin: 0;
+}
+header {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background-color: #005CA9;
+padding: 30px 0 20px 0;
+}
+
+.header-title {
+display: flex;
+align-items: flex-start;
+}
+
+.basketball-image {
+width: 60px;
+padding-right: 20px;
+align-self: center;
+position: relative;
+animation: movingBasketball linear 10s infinite 1s alternate;
+}
+
+.creighton-image {
+    width: 60px;
+    padding-right: 20px;
+    align-self: left;
+    position: relative;
+}
+
+@keyframes movingBasketball {
+0% {
+    opacity: 0.5;
+    left: 0px;
+    transform: rotate(0deg);
+}
+
+100% {
+    opacity: 0.5;
+    left: 850px;
+    transform: rotate(1080deg);
+}
+}
+
+header h1 {
+color: white;
+font-family: "Shrikhand", cursive;
+letter-spacing: 4px;
+font-size: 3rem;
+margin: 0;
+padding: 0;
+display: inline;
+}
+
+nav li {
+padding: 2rem 1rem;
+display: inline;
+}
+
+li > a {
+color: white;
+text-decoration: none;
+text-transform: uppercase;
+font-size: 1.25rem;
+letter-spacing: 1px;
+}
+
+li > a:hover {
+color: rgb(133, 126, 111);
+}
+
+#this {
+color: rgb(133, 126, 111);
+}
+
+main {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+position: relative;
+padding-bottom: 60px;
+}
+
+.title {
+text-align: center;
+}
+
+
+
+footer {
+position: absolute;
+bottom: 0;
+background-color: #005CA9;
+color: white;
+width: 100%;
+padding: 10px;
+display: flex;
+justify-content: space-around;
+}
+
+footer a {
+color: rgb(133, 126, 111);
+}
+
+
+/* Add Zoom Animation */
+.animate {
+animation: animatezoom 1s;
+}
+
+@keyframes animatezoom {
+from {
+    transform: scale(0);
+}
+to {
+    transform: scale(1);
+}
+}
+
+
+
+/* Table Styling */
+table {
+font-family: arial, sans-serif;
+border-collapse: collapse;
+width: 100%;
+}
+
+td, th {
+border: 1px solid #dddddd;
+text-align: center;
+padding: 8px;
+}
+
+tr:nth-child(even) {
+background-color: #dddddd;
+}
